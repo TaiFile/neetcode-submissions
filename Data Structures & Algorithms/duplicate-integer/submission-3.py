@@ -1,0 +1,16 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        # nums.sort()
+        # # percorrer todo vetor e verificar se existe igual
+        # for i in range(len(nums) - 1):
+        #     if(nums[i] == nums[i+1]):
+        #         return True
+        # return False
+        nums.sort()
+        hashset = set()
+        for n in nums:
+            if n in hashset:
+                return True
+            hashset.add(n)
+        return False
+        
